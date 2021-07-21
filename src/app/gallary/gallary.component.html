@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card justify-content-center">
+    <div class="card-header">
+      <h1 class="text-center">{{user}}</h1>
+    </div>
+
+    <div class="card-body flex-fill">
+      <div class="imagecontainer">
+        <div class="image" *ngFor="let image of images">
+          <img [src]="this.api.baseUrl+image.img_name" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

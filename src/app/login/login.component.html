@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="username" class='fa fa-envelope'></label>
+          <input type="username" placeholder="Username" formControlName="username">
+          <span class="text-danger"
+            *ngIf="loginForm.controls.username.errors && loginForm.controls.username.touched"><br>Invalid
+            UserName</span>
+        </div>
+
+        <div class="form-group">
+          <label for="password" class="fa fa-lock"></label>
+          <input type="password" placeholder="Password" formControlName="password">
+          <span class="text-danger"
+            *ngIf="loginForm.controls.password.errors && loginForm.controls.password.touched"><br>Invalid
+            Password</span>
+        </div>
+
+        <div class="text-center">
+          <button id="submitButton" type="submit" class="btn btn-primary" [disabled]="!loginForm.valid">Login</button>
+        </div>
+        <div class="text-center text-danger" *ngIf="failureMessage">{{failureMessage}}</div>
+
+      </form>
+    </div>
+  </div>
+</div>

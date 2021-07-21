@@ -1,0 +1,22 @@
+.imagecontainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.card-body {
+
+  /* height: 300px; */
+  height: max-content;
+  width: 100%;
+  background-color: white;
+
+}
+
+img {
+  /* object-fit: cover; */
+  height: 15rem;
+  width: 100%;
+}
